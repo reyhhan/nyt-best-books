@@ -30,7 +30,7 @@ const App = () => {
   //fetch  the best selling book list name from api
   useEffect(() => {
     const api_key = process.env.REACT_APP_API_KEY
-    axios.get(`https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=${api_key}`)
+    axios.get(`https://cors-anywhere.herokuapp.com/https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=${api_key}`)
       .then(response => {
         setList(response.data)
       })
@@ -39,7 +39,7 @@ const App = () => {
   //fetch the books from best sellers list from api
   useEffect(() => {
     const api_key = process.env.REACT_APP_API_KEY
-    axios.get(`https://api.nytimes.com/svc/books/v3/lists/current/${encode.list_name_encoded}?api-key=${api_key}`)
+    axios.get(`https://cors-anywhere.herokuapp.com/https://api.nytimes.com/svc/books/v3/lists/current/${encode.list_name_encoded}?api-key=${api_key}`)
       .then(response => {
         setBooks(response.data)
       })
