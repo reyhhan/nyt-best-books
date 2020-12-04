@@ -13,14 +13,13 @@ const Footer = () => {
 }
 
 const App = () => {
-
   const [list, setList] = useState([]);
   const [books, setBooks] = useState([]);
   const [show, setModal] = useState(false);
   const [details, setDetails] = useState({
     author: null, book_image: null, description: null,
     price: null, publisher: null, title: null,
-    contributor: null, rank_last_week: null,buy_links: null,
+    contributor: null, rank_last_week: null, buy_links: null,
   })
   const [encode, setEncode] = useState({
     list_name_encoded: "combined-print-and-e-book-fiction",
@@ -45,7 +44,7 @@ const App = () => {
       })
   }, [encode.list_name_encoded])
 
-  //proceed to amazon website to purchase on Buy Click
+  //proceed to amazon website to purchase on clicking Buy
   const setUrl = (url) => {
     const handler = () => {
       window.open(url)
@@ -53,7 +52,7 @@ const App = () => {
     return handler
   }
 
-  //get the selected book details on View Click
+  //get the selected book details on clicking View
   //opens modal view on View Click
   const setView = (detail) => {
     const handler = () => {
@@ -86,7 +85,6 @@ const App = () => {
         <div className="right">
           <div className="list-name-class">{encode.display_name}</div>
           <hr />
-
           <Modal show={show} onHide={handleClose} size="lg">
             <Modal.Header closeButton>
               <Modal.Title><i>{details.title}&nbsp;&nbsp;<small>{details.contributor}</small></i>
