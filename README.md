@@ -1,4 +1,4 @@
-<h3>An web application showing The New York Times Best-Selling books</h3>
+<h3>A web application that shows The New York Times Best-Selling books</h3>
 
 The app can be alternatively accessed on https://nyt-best-books.herokuapp.com/
 
